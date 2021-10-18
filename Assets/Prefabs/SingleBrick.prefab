@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 412853838332018765}
   - component: {fileID: 4994937927653054322}
   - component: {fileID: 6649404289437203447}
+  - component: {fileID: 7653928871968913366}
   m_Layer: 0
   m_Name: SingleBrick
   m_TagString: Untagged
@@ -137,3 +138,17 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.43359375}
       - {x: 0.5, y: 0}
       - {x: 0.25, y: 0.43359375}
+--- !u!114 &7653928871968913366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412853838332018738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ea32a38d3004be38c6145bb431ea7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitValue: 10
+  maxHP: 1
