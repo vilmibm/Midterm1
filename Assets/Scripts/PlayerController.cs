@@ -12,10 +12,16 @@ public class PlayerController : MonoBehaviour {
   private bool lockRight;
 
   void Start() {
+    lockLeft = true;
+    lockRight = true;
     contacts = new ContactPoint2D[2];
   }
 
   void Update() {
+    if (Input.GetKeyDown(KeyCode.Space) && (lockLeft && lockRight)) {
+      lockLeft = false;
+      lockRight = false;
+    }
     horizontalInput = Input.GetAxis("Horizontal");
     if (lockLeft && horizontalInput < 0) {
       return;
