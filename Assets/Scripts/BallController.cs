@@ -51,6 +51,11 @@ public class BallController : MonoBehaviour
             return;
         }
 
+        if (other.collider.offset.y < 0) {
+            // side hit
+            return;
+        }
+
         ballRb.velocity = new Vector2(0,0);
 
         if (other.collider.offset.x < 0) {
