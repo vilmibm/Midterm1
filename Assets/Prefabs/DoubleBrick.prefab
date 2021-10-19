@@ -151,4 +151,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitValue: 10
+  lvlc: {fileID: 0}
   maxHP: 2

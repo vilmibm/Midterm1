@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BrickController : MonoBehaviour {
     public int hitValue;
+    public LevelController lvlc;
     public int maxHP;
     private int hp;
 
@@ -18,7 +19,7 @@ public class BrickController : MonoBehaviour {
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
-        Debug.Log("TODO add points " + hitValue);
+        lvlc.AddScore(hitValue);
         hp--;
     }
 }

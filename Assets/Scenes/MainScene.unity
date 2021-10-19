@@ -949,6 +949,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7653928871968913366, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
+      propertyPath: lvlc
+      value: 
+      objectReference: {fileID: 220810356}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
 --- !u!1001 &4498216788678323169
@@ -1067,6 +1071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleBrick
       objectReference: {fileID: 0}
+    - target: {fileID: 6973331805795066521, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
+      propertyPath: lvlc
+      value: 
+      objectReference: {fileID: 220810356}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
 --- !u!1001 &6896483903172164522
