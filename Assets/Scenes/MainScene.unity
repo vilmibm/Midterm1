@@ -154,6 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxLives: 3
   paddle: {fileID: 1800240992}
+  livesText: {fileID: 1214448385}
 --- !u!4 &134703433
 Transform:
   m_ObjectHideFlags: 0
@@ -577,7 +578,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: LOL
+  m_Text: 
 --- !u!222 &1214448386
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1324,11 +1325,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412853838332018764, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.54
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 412853838332018764, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.65
+      value: -1.94
       objectReference: {fileID: 0}
     - target: {fileID: 412853838332018764, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1366,6 +1367,10 @@ PrefabInstance:
       propertyPath: lvlc
       value: 
       objectReference: {fileID: 220810356}
+    - target: {fileID: 7653928871968913366, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
+      propertyPath: gameMaster
+      value: 
+      objectReference: {fileID: 134703432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
 --- !u!1001 &4498216788678323169
@@ -1446,7 +1451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5795448520158930115, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.55
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 5795448520158930115, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1492,6 +1497,10 @@ PrefabInstance:
       propertyPath: lvlc
       value: 
       objectReference: {fileID: 220810356}
+    - target: {fileID: 6973331805795066521, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
+      propertyPath: gameMaster
+      value: 
+      objectReference: {fileID: 134703432}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4dabe3aad14c467c9ded95f8e0ad656, type: 3}
 --- !u!1001 &6896483903172164522

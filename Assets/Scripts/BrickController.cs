@@ -5,6 +5,7 @@ using UnityEngine;
 public class BrickController : MonoBehaviour {
     public int hitValue;
     public LevelController lvlc;
+    public GameMaster gameMaster;
     public int maxHP;
     private int hp;
 
