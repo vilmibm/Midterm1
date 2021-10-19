@@ -10,8 +10,10 @@ public class PlayerController : MonoBehaviour {
 
   private bool lockLeft;
   private bool lockRight;
+  private Vector2 startPos;
 
   void Start() {
+    startPos = transform.position;
     lockLeft = true;
     lockRight = true;
     contacts = new ContactPoint2D[2];
@@ -52,5 +54,9 @@ public class PlayerController : MonoBehaviour {
     }
     lockLeft = false;
     lockRight = false;
+  }
+
+  public void Reset() {
+    transform.position = startPos;
   }
 }

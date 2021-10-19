@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour {
     public int maxLives = 3;
-    public GameObject paddle;
+    public PlayerController paddle;
     private int lives;
     void Start() {
         lives = maxLives;
@@ -15,8 +15,9 @@ public class GameMaster : MonoBehaviour {
         lives--;
         if (lives == 0) {
             SceneManager.LoadScene("GameOver");
+            return;
         }
-    //    paddle.Reset();
+        paddle.Reset();
     }
 
     void Update() { }
