@@ -48,7 +48,6 @@ public class BallController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "KillPlane") {
-            Debug.Log("TODO RESET PADDLE");
             gameMaster.HandleBallDeath();
             Reset();
         }

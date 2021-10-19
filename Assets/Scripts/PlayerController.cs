@@ -58,5 +58,7 @@ public class PlayerController : MonoBehaviour {
 
   public void Reset() {
     transform.position = startPos;
+    lockLeft = true;
+    lockRight = true;
   }
 }
