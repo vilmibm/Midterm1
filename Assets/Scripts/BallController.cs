@@ -46,6 +46,24 @@ public class BallController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag != "Paddle") {
+            return;
+        }
+
+        ballRb.velocity = new Vector2(0,0);
+
+        if (other.collider.offset.x < 0) {
+            ballRb.AddForce(Vector2.left * ballForce);
+            ballRb.AddForce(Vector2.up * ballForce);
+        } else if (other.collider.offset.x < 0.3) {
+            ballRb.AddForce(Vector2.up * ballForce);
+        } else {
+            ballRb.AddForce(Vector2.right * ballForce);
+            ballRb.AddForce(Vector2.up * ballForce);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.tag == "KillPlane") {
             gameMaster.HandleBallDeath();
