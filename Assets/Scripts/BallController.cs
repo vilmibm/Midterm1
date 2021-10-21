@@ -56,14 +56,12 @@ public class BallController : MonoBehaviour
             return;
         }
 
-        ballRb.velocity = new Vector2(0,0);
-
         if (other.collider.offset.x < 0) {
+            ballRb.velocity = new Vector2(0,0);
             ballRb.AddForce(Vector2.left * ballForce);
             ballRb.AddForce(Vector2.up * ballForce);
-        } else if (other.collider.offset.x < 0.3) {
-            ballRb.AddForce(Vector2.up * ballForce);
-        } else {
+        } else if (other.collider.offset.x > 0.3) {
+            ballRb.velocity = new Vector2(0,0);
             ballRb.AddForce(Vector2.right * ballForce);
             ballRb.AddForce(Vector2.up * ballForce);
         }
