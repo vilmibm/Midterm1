@@ -31,7 +31,11 @@ public class GameMaster : MonoBehaviour {
     }
 
     void Update() {
-        livesText.text = string.Format("{0} lives", lives);
+        string noun = "balls";
+        if (lives == 1) {
+            noun = "ball";
+        }
+        livesText.text = string.Format("{0} {1}", lives, noun);
         CheckWon();
     }
 }
