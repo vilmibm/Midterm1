@@ -8,12 +8,17 @@ public class BrickController : MonoBehaviour {
     public GameMaster gameMaster;
     public int maxHP;
     private int hp;
+    private SpriteRenderer sRenderer;
 
     void Start() {
         hp = maxHP;
+        sRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update() {
+        if (hp == 1) {
+            sRenderer.color = Color.white;
+        }
         if (hp <= 0) {
             Destroy(this.gameObject);
         }
