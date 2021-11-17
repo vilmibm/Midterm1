@@ -26,7 +26,7 @@ public class GameMaster : MonoBehaviour {
     public void CheckWon() {
         bricks = GameObject.FindGameObjectsWithTag("Brick");
         if (bricks.Length == 0 && lives > 0) { // probably over-defensive here
-            SceneManager.LoadScene("GameWon");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
     }
 

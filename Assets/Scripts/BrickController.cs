@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class BrickController : MonoBehaviour {
     public int hitValue;
-    public LevelController lvlc;
-    public GameMaster gameMaster;
+    private LevelController lvlc;
     public int maxHP;
     private int hp;
     private SpriteRenderer sRenderer;
 
     void Start() {
+        GameObject levelController = GameObject.Find("LevelController");
+        lvlc = levelController.GetComponent<LevelController>();
+        Debug.Log(lvlc);
         hp = maxHP;
         sRenderer = GetComponent<SpriteRenderer>();
     }

@@ -7,6 +7,7 @@ public class LevelController : MonoBehaviour {
     public int score;
     public Text scoreText;
 
+    // TODO need to dynamically look up text in the scene
     void Start() {
         score = 0;
     }
