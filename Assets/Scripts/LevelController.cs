@@ -9,6 +9,7 @@ public class LevelController : MonoBehaviour {
 
     // TODO need to dynamically look up text in the scene
     void Start() {
+        scoreText = GameObject.Find("ScoreUI").GetComponent<Text>();
         score = 0;
     }
 
