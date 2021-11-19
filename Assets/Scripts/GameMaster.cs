@@ -13,6 +13,9 @@ public class GameMaster : MonoBehaviour {
     void Start() {
         lives = maxLives;
     }
+    public void AddLife(int howMany) {
+        lives += howMany;
+    }
 
     public void HandleBallDeath() {
         lives--;
