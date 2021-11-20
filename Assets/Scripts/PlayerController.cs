@@ -12,7 +12,10 @@ public class PlayerController : MonoBehaviour {
   private bool lockRight;
   private Vector2 startPos;
 
+  private float startingWidth;
+
   void Start() {
+    startingWidth = transform.localScale.x;
     startPos = transform.position;
     lockLeft = true;
     lockRight = true;
@@ -60,5 +63,15 @@ public class PlayerController : MonoBehaviour {
     transform.position = startPos;
     lockLeft = true;
     lockRight = true;
+  }
+
+  public void Extend(float scale) {
+    Vector3 s = this.transform.localScale;
+    this.transform.localScale = new Vector3(s.x*scale, s.y, s.z);
+  }
+
+  public void ResetSize() {
+    Vector3 s = this.transform.localScale;
+    this.transform.localScale = new Vector3(startingWidth, s.y, s.z);
   }
 }
