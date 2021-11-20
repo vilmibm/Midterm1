@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour {
     lockRight = true;
   }
 
-  public void Extend(float scale) {
+  public void Scale(float scale) {
     if (extended) {
       return;
     }

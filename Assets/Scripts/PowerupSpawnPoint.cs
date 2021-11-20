@@ -14,7 +14,7 @@ public class PowerupSpawnPoint : MonoBehaviour {
     void SpawnPowerup() {
         if (transform.childCount == 0) {
             Powerup powerupPrefab = possiblePowerups[Random.Range(0, possiblePowerups.Length)];
-            Powerup child = Instantiate(powerupPrefab, transform.position, transform.rotation);
+            Powerup child = Instantiate(powerupPrefab, transform.position, powerupPrefab.transform.rotation);
             child.transform.parent = transform;
         }
 
