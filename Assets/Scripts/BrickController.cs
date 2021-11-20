@@ -6,18 +6,17 @@ public class BrickController : MonoBehaviour {
     public int hitValue;
     private LevelController lvlc;
     public int maxHP;
-    private int hp;
+    public int hp;
     private SpriteRenderer sRenderer;
 
     void Start() {
         GameObject levelController = GameObject.Find("LevelController");
         lvlc = levelController.GetComponent<LevelController>();
-        Debug.Log(lvlc);
         hp = maxHP;
         sRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void Update() {
+    void LateUpdate() {
         if (hp == 1) {
             sRenderer.color = Color.white;
         }

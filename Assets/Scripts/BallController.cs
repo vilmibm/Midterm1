@@ -11,12 +11,14 @@ public class BallController : MonoBehaviour
     private Vector2 startingPos;
 
     void Start() {
+        Debug.Log("WTF");
+        Debug.Log(transform.position);
         ballRb = GetComponent<Rigidbody2D>();
         startingPos = transform.position;
         launched = false;
     }
 
-    void Reset() {
+    public void Reset() {
         launched = false;
         ballRb.velocity = new Vector2(0,0);
         transform.position = startingPos;
@@ -43,27 +45,6 @@ public class BallController : MonoBehaviour
                 ballRb.AddForce(Vector2.up * ballForce);
                 ballRb.AddForce(Vector2.left * ballForce);
                 break;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag != "Paddle") {
-            return;
-        }
-
-        if (other.collider.offset.y < 0) {
-            // side hit
-            return;
-        }
-
-        if (other.collider.offset.x < 0) {
-            ballRb.velocity = new Vector2(0,0);
-            ballRb.AddForce(Vector2.left * ballForce);
-            ballRb.AddForce(Vector2.up * ballForce);
-        } else if (other.collider.offset.x > 0.3) {
-            ballRb.velocity = new Vector2(0,0);
-            ballRb.AddForce(Vector2.right * ballForce);
-            ballRb.AddForce(Vector2.up * ballForce);
         }
     }
 
