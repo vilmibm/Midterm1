@@ -13,6 +13,10 @@ public class Powerup : MonoBehaviour {
             PlayerController pc = GameObject.Find("Paddle").GetComponent<PlayerController>();
             pc.Extend(2.0f);
             pc.Invoke("ResetSize", 6.0f);
+        } else if (type == "ShrinkPaddle") {
+            PlayerController pc = GameObject.Find("Paddle").GetComponent<PlayerController>();
+            pc.Extend(0.5f);
+            pc.Invoke("ResetSize", 6.0f);
         }
     }
 }

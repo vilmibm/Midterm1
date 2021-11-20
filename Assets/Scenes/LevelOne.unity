@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412853838332018764, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.45
+      value: 3.92
       objectReference: {fileID: 0}
     - target: {fileID: 412853838332018764, guid: cd124a1ea19444625a58ebe7b85abf58, type: 3}
       propertyPath: m_LocalPosition.y
@@ -373,10 +373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4498216789752860684, guid: d78564e1225f74beaab2b46bdbb86f83, type: 3}
-      propertyPath: m_AngularDrag
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 4498216789752860685, guid: d78564e1225f74beaab2b46bdbb86f83, type: 3}
       propertyPath: m_Name
       value: Ball
@@ -601,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[0]
@@ -611,6 +607,10 @@ PrefabInstance:
       propertyPath: possiblePowerups.Array.data[1]
       value: 
       objectReference: {fileID: 7804155283160498508, guid: e9162fd5da6cb7c43af711a693d9f2f9, type: 3}
+    - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
+      propertyPath: possiblePowerups.Array.data[2]
+      value: 
+      objectReference: {fileID: 6053385483028431150, guid: f5431bd2bb6a75a409e32b7847c1f584, type: 3}
     - target: {fileID: 8871511524128134114, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1448,12 +1448,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[1]
       value: 
       objectReference: {fileID: 2203791075911795663, guid: f2cdcc7966c30f24c8543cf584e7bcc0, type: 3}
+    - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
+      propertyPath: possiblePowerups.Array.data[2]
+      value: 
+      objectReference: {fileID: 6053385483028431150, guid: f5431bd2bb6a75a409e32b7847c1f584, type: 3}
     - target: {fileID: 8871511524128134114, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: m_RootOrder
       value: 3

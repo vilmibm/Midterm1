@@ -5,16 +5,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
   public float speed = 10.0f;
   private float horizontalInput;
-
   private ContactPoint2D[] contacts;
-
   private bool lockLeft;
   private bool lockRight;
   private Vector2 startPos;
-
   private float startingWidth;
+  private bool extended;
 
   void Start() {
+    extended = false;
     startingWidth = transform.localScale.x;
     startPos = transform.position;
     lockLeft = true;
@@ -66,11 +65,16 @@ public class PlayerController : MonoBehaviour {
   }
 
   public void Extend(float scale) {
+    if (extended) {
+      return;
+    }
+    extended = true;
     Vector3 s = this.transform.localScale;
     this.transform.localScale = new Vector3(s.x*scale, s.y, s.z);
   }
 
   public void ResetSize() {
+    extended = false;
     Vector3 s = this.transform.localScale;
     this.transform.localScale = new Vector3(startingWidth, s.y, s.z);
   }

@@ -23,6 +23,9 @@ public class PowerupSpawnPoint : MonoBehaviour {
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        if (!other.gameObject.CompareTag("Ball")) {
+            return;
+        }
         if (transform.childCount == 0) {
             return;
         }
