@@ -7,7 +7,10 @@ public class CheatManager : MonoBehaviour {
     private BallController ballController;
 
     void Start() {
-        ballController = GameObject.Find("Ball").GetComponent<BallController>();
+        GameObject ball = GameObject.Find("Ball");
+        if (ball != null) {
+            ballController = ball.GetComponent<BallController>();
+        }
     }
 
     void Update() {

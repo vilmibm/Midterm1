@@ -13,6 +13,7 @@ public class BallController : MonoBehaviour
     private float speedUpFactor;
     private float slowDownFactor;
     private int numClones;
+    SpriteRenderer spriteRenderer;
 
     void Start() {
         numClones = 3;
@@ -20,6 +21,7 @@ public class BallController : MonoBehaviour
         slowDownFactor = 2.0f;
         speedModified = false;
         ballRb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         startingPos = transform.position;
         launched = false;
     }
@@ -29,7 +31,6 @@ public class BallController : MonoBehaviour
         ballRb.bodyType = RigidbodyType2D.Static;
         speedModified = false;
         launched = false;
-        ballRb.velocity = new Vector2(0,0);
         transform.position = startingPos;
     }
 
@@ -72,7 +73,10 @@ public class BallController : MonoBehaviour
     }
 
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) && !launched) {
+        spriteRenderer.transform.RotateAround(transform.position, Vector3.forward, ballRb.rotation);
+        Debug.Log(ballRb.rotation);
+
+        if (Input.GetKeyDown(KeyCode.Space) && !launched && !gameObject.CompareTag("BallClone")) {
             Launch();
         }
     }
@@ -81,6 +85,8 @@ public class BallController : MonoBehaviour
         for (int i = 0; i < numClones; i++) {
             BallController clone = Instantiate(this, transform.position, transform.rotation);
             clone.gameObject.tag = "BallClone";
+            SpriteRenderer cloneSpriteRenderer = clone.GetComponent<SpriteRenderer>();
+            cloneSpriteRenderer.color = Color.gray;
             Rigidbody2D cloneRb = clone.gameObject.GetComponent<Rigidbody2D>();
             int dir = Random.Range(0,2);
             switch(dir) {
