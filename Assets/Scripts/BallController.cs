@@ -24,7 +24,7 @@ public class BallController : MonoBehaviour
         launched = false;
     }
 
-    private void Reset() {
+    public void Reset() {
         StopAllCoroutines();
         ballRb.bodyType = RigidbodyType2D.Static;
         speedModified = false;
