@@ -157,15 +157,15 @@ PrefabInstance:
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[0]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[1]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[2]
       value: 
-      objectReference: {fileID: 5648763879841378115, guid: 95c9e479c61633445a015068c17baa5e, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 8871511524128134114, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -699,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[0]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[1]
       value: 
@@ -707,7 +707,7 @@ PrefabInstance:
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[2]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 8871511524128134114, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1550,11 +1550,11 @@ PrefabInstance:
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[1]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 5748905207463926036, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: possiblePowerups.Array.data[2]
       value: 
-      objectReference: {fileID: 6002064315624693291, guid: edda4137bdec26c43b2ddf6d77e080da, type: 3}
+      objectReference: {fileID: 561187979361497846, guid: ed0594497ee87ed44965b3373db2ff3a, type: 3}
     - target: {fileID: 8871511524128134114, guid: ef17cf9d5a9fca648876103363742797, type: 3}
       propertyPath: m_RootOrder
       value: 3

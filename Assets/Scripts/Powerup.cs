@@ -30,12 +30,6 @@ public class Powerup : MonoBehaviour {
             ballController.ApplySlowDown();
         } else if (type == "MultiBall") {
             ballController.MakeClones();
-            // TODO method on Ball that clones itself x3?
-            // TODO need CloneBall prefix or can instantiate a ball and then clone?
-                // - they need to be able to break bricks but not be able to die
-                // - refresh on kill/death logic and update to ignore cloneballs
-                // - understand tagging -- if possible, easier to clone Ball and fix tag
-            // TODO
         }
     }
 }
