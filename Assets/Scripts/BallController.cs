@@ -52,7 +52,6 @@ public class BallController : MonoBehaviour
         if (speedModified) {
             return;
         }
-        Debug.Log("farts");
         speedModified = true;
         ballRb.AddForce(-slowDownFactor * ballRb.velocity, ForceMode2D.Impulse);
         StartCoroutine(SlowDownModifierCooldown());
@@ -74,7 +73,6 @@ public class BallController : MonoBehaviour
 
     void Update() {
         spriteRenderer.transform.RotateAround(transform.position, Vector3.forward, ballRb.rotation);
-        Debug.Log(ballRb.rotation);
 
         if (Input.GetKeyDown(KeyCode.Space) && !launched && !gameObject.CompareTag("BallClone")) {
             Launch();
@@ -121,7 +119,6 @@ public class BallController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(gameObject.tag);
         if (!this.gameObject.CompareTag("Ball")) {
             return;
         }
