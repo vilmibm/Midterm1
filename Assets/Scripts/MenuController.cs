@@ -13,6 +13,7 @@ public class MenuController : MonoBehaviour {
     }
 
     public void HowToPlay() {
+        SceneManager.LoadScene("HowToPlay");
         // TODO make image
         Debug.Log("TODO HOW TO PLAY");
     }

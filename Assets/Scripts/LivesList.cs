@@ -17,6 +17,9 @@ public class LivesList : MonoBehaviour {
     }
 
     public void AddLife() {
+        if (spriteRenderer == null) {
+            return;
+        }
         float x = (transform.position.x - spriteRenderer.bounds.size.x/2)  + (spriteWidth * lives.Count) + spriteWidth;
         GameObject newLife = Instantiate(life, new Vector2(x, transform.position.y), Quaternion.identity);
         newLife.transform.parent = this.gameObject.transform;
