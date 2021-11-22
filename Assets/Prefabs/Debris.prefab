@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3065281545637339564}
   - component: {fileID: 852831983039470391}
   - component: {fileID: 1982197723597005350}
+  - component: {fileID: 4578710953147035882}
   m_Layer: 0
   m_Name: Debris
   m_TagString: Untagged
@@ -187,3 +188,15 @@ PolygonCollider2D:
       - {x: -0.71310616, y: -0.00052821636}
       - {x: 0.009788513, y: -0.4061097}
       - {x: 0.6819515, y: -0.016609788}
+--- !u!114 &4578710953147035882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8039778339074919775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 318b7b0848acf2948bf86a1ec588a7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

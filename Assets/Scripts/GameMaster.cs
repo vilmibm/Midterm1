@@ -7,16 +7,22 @@ using UnityEngine.UI;
 public class GameMaster : MonoBehaviour {
     public int maxLives = 3;
     public PlayerController paddle;
-    public Text livesText;
     private int lives;
     private GameObject[] bricks;
     private AudioController audioController;
+    private LivesList livesList;
     void Start() {
         lives = maxLives;
         audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
+        livesList = GameObject.Find("LivesList").GetComponent<LivesList>();
+        for (int i = 0; i < lives; i++) {
+            // TODO less liveList to add a life
+            livesList.AddLife();
+        }
     }
     public void AddLife(int howMany) {
         audioController.LifeUp();
+        livesList.AddLife();
         lives += howMany;
     }
 
@@ -27,22 +33,14 @@ public class GameMaster : MonoBehaviour {
             SceneManager.LoadScene("GameOver");
             return;
         }
+        livesList.RemoveLife();
         paddle.Reset();
     }
 
-    public void CheckWon() {
+    void Update() {
         bricks = GameObject.FindGameObjectsWithTag("Brick");
         if (bricks.Length == 0 && lives > 0) { // probably over-defensive here
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
         }
-    }
-
-    void Update() {
-        string noun = "balls";
-        if (lives == 1) {
-            noun = "ball";
-        }
-        livesText.text = string.Format("{0} {1}", lives, noun);
-        CheckWon();
     }
 }

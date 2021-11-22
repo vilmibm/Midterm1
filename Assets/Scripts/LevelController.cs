@@ -16,6 +16,6 @@ public class LevelController : MonoBehaviour {
 
     public void AddScore(int value) {
         score += value;
-        scoreText.text = string.Format("Score: {0}", score);
+        scoreText.text = string.Format("score: {0}", score);
     }
 }

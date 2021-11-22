@@ -35,6 +35,7 @@ public class BallController : MonoBehaviour
         ballRb.angularVelocity = 0.0f;
         ballRb.rotation = 0.0f;
         ballRb.bodyType = RigidbodyType2D.Static;
+        transform.rotation = Quaternion.identity;
         speedModified = false;
         launched = false;
         Instantiate(ballSpawnAnimation, startingPos, Quaternion.identity);
@@ -132,7 +133,7 @@ public class BallController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.gameObject.tag == "KillPlane") {
+        if (other.gameObject.CompareTag("KillPlane")) {
             if (gameObject.CompareTag("BallClone")) {
                 Destroy(gameObject);
             } else {

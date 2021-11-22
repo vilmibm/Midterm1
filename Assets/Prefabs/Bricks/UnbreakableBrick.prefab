@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6578481271322374792}
   - component: {fileID: 6455866012302379781}
   - component: {fileID: 2804728697398032955}
+  - component: {fileID: 3957573331455826501}
   m_Layer: 0
   m_Name: UnbreakableBrick
   m_TagString: Untagged
@@ -189,3 +190,16 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3957573331455826501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6896483903591638025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f51a238430d45f4ca22c8d7c8fb21fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteAnimation: {fileID: 8131711011346972425, guid: 6e464cdc3c2144a48a0ff6c22d6b9eed, type: 3}
