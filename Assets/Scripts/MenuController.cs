@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour {
     public void StartGame() {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame() {
@@ -13,7 +13,7 @@ public class MenuController : MonoBehaviour {
     }
 
     public void HowToPlay() {
-        // TODO what to do here? load an interactive scene? SetActive a graphic?
+        // TODO make image
         Debug.Log("TODO HOW TO PLAY");
     }
 }

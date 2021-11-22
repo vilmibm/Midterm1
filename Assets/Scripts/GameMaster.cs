@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class GameMaster : MonoBehaviour {
     public int maxLives = 3;
-    public PlayerController paddle;
+    private PlayerController paddle;
     private int lives;
     private GameObject[] bricks;
     private AudioController audioController;
     private LivesList livesList;
     void Start() {
+        paddle = GameObject.Find("Paddle").GetComponent<PlayerController>();
         lives = maxLives;
         audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         livesList = GameObject.Find("LivesList").GetComponent<LivesList>();
