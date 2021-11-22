@@ -10,15 +10,21 @@ public class Explode : MonoBehaviour {
     public float maxSideForce = 2.0f;
     public GameObject debrisPrefab;
     private BrickController brickController;
+    private AudioController audioController;
+    private bool exploded;
 
     void Start() { 
+        exploded = false;
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         brickController = gameObject.GetComponent<BrickController>();
     }
 
     void Update() {
-        if (brickController.hp > 0) {
+        if (brickController.hp > 0 || exploded) {
             return;
         }
+        exploded = true;
+        audioController.Explosion();
         // TODO figure out how to hide the sprite so it can still 
         //      be destroyed by LateUpdate in bc
         for (int i = 0; i < numDebris; i++) { 

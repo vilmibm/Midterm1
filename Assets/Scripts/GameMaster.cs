@@ -10,14 +10,18 @@ public class GameMaster : MonoBehaviour {
     public Text livesText;
     private int lives;
     private GameObject[] bricks;
+    private AudioController audioController;
     void Start() {
         lives = maxLives;
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
     }
     public void AddLife(int howMany) {
+        audioController.LifeUp();
         lives += howMany;
     }
 
     public void HandleBallDeath() {
+        audioController.LifeLost();
         lives--;
         if (lives == 0) {
             SceneManager.LoadScene("GameOver");

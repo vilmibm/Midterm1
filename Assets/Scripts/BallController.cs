@@ -14,9 +14,11 @@ public class BallController : MonoBehaviour
     private float speedUpFactor;
     private float slowDownFactor;
     private int numClones;
-    SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+    private AudioController audioController;
 
     void Start() {
+        audioController = GameObject.Find("AudioController").GetComponent<AudioController>();
         gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
         numClones = 3;
         speedUpFactor = 4.0f;
@@ -123,13 +125,20 @@ public class BallController : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other) {
+        if (!other.gameObject.CompareTag("Brick")) {
+            audioController.BallBounce();
+        } 
+    }
+
     private void OnTriggerEnter2D(Collider2D other) {
-        if (!this.gameObject.CompareTag("Ball")) {
-            return;
-        }
         if (other.gameObject.tag == "KillPlane") {
-            gameMaster.HandleBallDeath();
-            Reset();
+            if (gameObject.CompareTag("BallClone")) {
+                Destroy(gameObject);
+            } else {
+                gameMaster.HandleBallDeath();
+                Reset();
+            }
         }
     }
 }

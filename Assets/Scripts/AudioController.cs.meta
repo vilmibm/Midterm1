@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7c53daf0f07ed49419cd2896a2373476
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ballSpeedDown: {instanceID: 0}
+  - ballSpeedUp: {instanceID: 0}
+  - paddleExtend: {instanceID: 0}
+  - paddleShrink: {instanceID: 0}
+  - lifeUp: {instanceID: 0}
+  - lostLife: {instanceID: 0}
+  - multiBall: {instanceID: 0}
+  - explosion: {instanceID: 0}
+  - ballBounce: {instanceID: 0}
+  - brickBreak: {instanceID: 0}
+  - brickHit: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
