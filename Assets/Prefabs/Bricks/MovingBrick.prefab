@@ -220,9 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 364477ea704dece4289cb82845e329ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 3
+  range: 0.75
   direction: {x: 1, y: 0}
-  speed: 2
+  speed: 1.25
 --- !u!114 &4463586886870020483
 MonoBehaviour:
   m_ObjectHideFlags: 0
