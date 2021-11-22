@@ -8,6 +8,8 @@ public class BrickController : MonoBehaviour {
     public int maxHP;
     public int hp;
     private SpriteRenderer sRenderer;
+    public GameObject hitAnimation;
+    public GameObject breakAnimation;
 
     void Start() {
         GameObject levelController = GameObject.Find("LevelController");
@@ -21,11 +23,15 @@ public class BrickController : MonoBehaviour {
             sRenderer.color = Color.white;
         }
         if (hp <= 0) {
+            Instantiate(breakAnimation, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D other) {
+        ContactPoint2D[] contacts = new ContactPoint2D[1];
+        other.GetContacts(contacts);
+        Instantiate(hitAnimation, new Vector3(contacts[0].point.x, contacts[0].point.y, 0), Quaternion.identity);
         lvlc.AddScore(hitValue);
         hp--;
     }

@@ -155,6 +155,8 @@ MonoBehaviour:
   hitValue: 10
   maxHP: 2
   hp: 0
+  hitAnimation: {fileID: 8131711011346972425, guid: 6e464cdc3c2144a48a0ff6c22d6b9eed, type: 3}
+  breakAnimation: {fileID: 2099537400395379052, guid: bf2bb6e0bb8794248b39f14177f71150, type: 3}
 --- !u!331 &5087373348791076476
 SpriteMask:
   m_ObjectHideFlags: 0

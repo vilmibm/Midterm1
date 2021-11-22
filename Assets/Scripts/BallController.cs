@@ -5,7 +5,8 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public float ballForce;
-    public GameMaster gameMaster;
+    private GameMaster gameMaster;
+    public GameObject ballSpawnAnimation;
     private Rigidbody2D ballRb;
     private bool launched;
     private Vector2 startingPos;
@@ -16,6 +17,7 @@ public class BallController : MonoBehaviour
     SpriteRenderer spriteRenderer;
 
     void Start() {
+        gameMaster = GameObject.Find("GameMaster").GetComponent<GameMaster>();
         numClones = 3;
         speedUpFactor = 4.0f;
         slowDownFactor = 2.0f;
@@ -28,9 +30,12 @@ public class BallController : MonoBehaviour
 
     public void Reset() {
         StopAllCoroutines();
+        ballRb.angularVelocity = 0.0f;
+        ballRb.rotation = 0.0f;
         ballRb.bodyType = RigidbodyType2D.Static;
         speedModified = false;
         launched = false;
+        Instantiate(ballSpawnAnimation, startingPos, Quaternion.identity);
         transform.position = startingPos;
     }
 
